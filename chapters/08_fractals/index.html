@@ -16,7 +16,7 @@ On a cold November day a man named Benoit Mandelbrot was born”<br />
 
 <p>Once upon a time, I took a course in high school called “Geometry.” Perhaps you did too. You learned about shapes in one dimension, two dimensions, and maybe even three. What is the circumference of a circle? The area of a rectangle? The distance between a point and a line? Come to think of it, we’ve been studying geometry all along in this book, using vectors to describe the motion of bodies in Cartesian space. This sort of geometry is generally referred to as Euclidean geometry, after the Greek mathematician Euclid.</p>
 
-<figure id="chapter08_figure1"><img alt="Figure 8.1" src="chapter08/ch08_01.png" />
+<figure id="chapter08_figure1"><img alt="Figure 8.1" src="ch08_01.png" />
 <figcaption>Figure 8.1</figcaption>
 </figure>
 
@@ -29,19 +29,19 @@ On a cold November day a man named Benoit Mandelbrot was born”<br />
 
 <p>The term <strong><em>fractal</em></strong> (from the Latin <em>fractus</em>, meaning “broken”) was coined by the mathematician Benoit Mandelbrot in 1975. In his seminal work “The Fractal Geometry of Nature,” he defines a fractal as “a rough or fragmented geometric shape that can be split into parts, each of which is (at least approximately) a reduced-size copy of the whole.”</p>
 
-<figure id="chapter08_figure2"><img alt="Figure 8.2: One of the most well-known and recognizable fractal patterns is named for Benoit Mandelbrot himself.   Generating the Mandelbrot set involves testing the properties of complex numbers after they are passed through an iterative function.  Do they tend to infinity?  Do they stay bounded?  While a fascinating mathematical discussion, this “escape-time” algorithm is a less practical method for generating fractals than the recursive techniques we’ll examine in this chapter.  However, an example for generating the Mandelbrot set is included in the code examples." src="chapter08/ch08_02.png" />
+<figure id="chapter08_figure2"><img alt="Figure 8.2: One of the most well-known and recognizable fractal patterns is named for Benoit Mandelbrot himself.   Generating the Mandelbrot set involves testing the properties of complex numbers after they are passed through an iterative function.  Do they tend to infinity?  Do they stay bounded?  While a fascinating mathematical discussion, this “escape-time” algorithm is a less practical method for generating fractals than the recursive techniques we’ll examine in this chapter.  However, an example for generating the Mandelbrot set is included in the code examples." src="ch08_02.png" />
 <figcaption>Figure 8.2: One of the most well-known and recognizable fractal patterns is named for Benoit Mandelbrot himself.   Generating the Mandelbrot set involves testing the properties of complex numbers after they are passed through an iterative function.  Do they tend to infinity?  Do they stay bounded?  While a fascinating mathematical discussion, this “escape-time” algorithm is a less practical method for generating fractals than the recursive techniques we’ll examine in this chapter.  However, an example for generating the Mandelbrot set is included in the code examples.&nbsp;</figcaption>
 </figure>
 
 <p>Let’s illustrate this definition with two simple examples. First, let’s think about a tree branching structure (for which we’ll write the code later):</p>
 
-<figure id="chapter08_figure3"><img alt="Figure 8.3" src="chapter08/ch08_03.png" />
+<figure id="chapter08_figure3"><img alt="Figure 8.3" src="ch08_03.png" />
 <figcaption>Figure 8.3</figcaption>
 </figure>
 
 <p>Notice how the tree in Figure 8.3 has a single root with two branches connected at its end. Each one of those branches has two branches at its end and those branches have two branches and so on and so forth. What if we were to pluck one branch from the tree and examine it on its own?</p>
 
-<figure id="chapter08_figure4"><img alt="Figure 8.4" src="chapter08/ch08_04.png" />
+<figure id="chapter08_figure4"><img alt="Figure 8.4" src="ch08_04.png" />
 <figcaption>Figure 8.4</figcaption>
 </figure>
 
@@ -51,13 +51,13 @@ On a cold November day a man named Benoit Mandelbrot was born”<br />
 
 <p>The above tree is perfectly symmetrical and the parts are, in fact, exact replicas of the whole. However, fractals do not have to be perfectly self-similar. Let’s take a look at a graph of the stock market (adapted from actual Apple stock data).</p>
 
-<figure id="chapter08_figure5"><img alt="Figure 8.5: Graph A" src="chapter08/ch08_05.png" />
+<figure id="chapter08_figure5"><img alt="Figure 8.5: Graph A" src="ch08_05.png" />
 <figcaption>Figure 8.5: Graph A&nbsp;</figcaption>
 </figure>
 
 <p>And one more.</p>
 
-<figure id="chapter08_figure6"><img alt="Figure 8.6: Graph B" src="chapter08/ch08_06.png" />
+<figure id="chapter08_figure6"><img alt="Figure 8.6: Graph B" src="ch08_06.png" />
 <figcaption>Figure 8.6: Graph B&nbsp;</figcaption>
 </figure>
 
@@ -65,7 +65,7 @@ On a cold November day a man named Benoit Mandelbrot was born”<br />
 
 <p>In these graphs, the x-axis is time and the y-axis is the stock’s value. It’s not an accident that I omitted the labels, however. Graphs of stock market data are examples of fractals because they look the same at any scale. Are these graphs of the stock over one year? One day? One hour? There’s no way for you to know without a label. (Incidentally, graph A shows six months’ worth of data and graph B zooms into a tiny part of graph A, showing six hours.)</p>
 
-<figure id="chapter08_figure7"><img alt="Figure 8.7" src="chapter08/ch08_07.png" />
+<figure id="chapter08_figure7"><img alt="Figure 8.7" src="ch08_07.png" />
 <figcaption>Figure 8.7</figcaption>
 </figure>
 
@@ -87,7 +87,7 @@ On a cold November day a man named Benoit Mandelbrot was born”<br />
 
 <p>Let’s begin our discussion of recursion by examining the first appearance of fractals in modern mathematics. In 1883, German mathematician George Cantor developed simple rules to generate an infinite set:</p>
 
-<figure id="chapter08_figure8"><img alt="Figure 8.8: The Cantor set" src="chapter08/ch08_08.png" />
+<figure id="chapter08_figure8"><img alt="Figure 8.8: The Cantor set" src="ch08_08.png" />
 <figcaption>Figure 8.8: The Cantor set&nbsp;</figcaption>
 </figure>
 
@@ -163,13 +163,13 @@ int factorial(int n) {
 
 <p>It may look crazy, but it works. Here are the steps that happen when <code>factorial(4)</code> is called.</p>
 
-<figure id="chapter08_figure9"><img alt="Figure 8.9" src="chapter08/ch08_09.png" />
+<figure id="chapter08_figure9"><img alt="Figure 8.9" src="ch08_09.png" />
 <figcaption>Figure 8.9</figcaption>
 </figure>
 
 <p>We can apply the same principle to graphics with interesting results, as we will see in many examples throughout this chapter. Take a look at this recursive function.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/SyjffpmOl"><img alt="ch08 ex01" src="chapter08/ch08_ex01.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/SyjffpmOl"><img alt="ch08 ex01" src="ch08_ex01.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -196,7 +196,7 @@ void drawCircle(int x, int y, float radius) {
 
 <p>Let’s make <code>drawCircle()</code> a bit more complex. For every circle displayed, draw a circle half its size to the left and right of that circle.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/S1NQfaQOg"><img alt="ch08 ex02" src="chapter08/ch08_ex02.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/S1NQfaQOg"><img alt="ch08 ex02" src="ch08_ex02.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -227,7 +227,7 @@ void drawCircle(float x, float y, float radius) {
 
 <p>With just a little more code, we could also add a circle above and below each circle.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/r1-HfaXux"><img alt="ch08 ex03" src="chapter08/ch08_ex03.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/r1-HfaXux"><img alt="ch08 ex03" src="ch08_ex03.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -266,11 +266,11 @@ cantor(10, 20, width-20);</pre>
 
 <p>we’d get the following:</p>
 
-<figure id="chapter08_figure10"><img alt="Figure 8.10" src="chapter08/ch08_10.png" />
+<figure id="chapter08_figure10"><img alt="Figure 8.10" src="ch08_10.png" />
 <figcaption>Figure 8.10</figcaption>
 </figure>
 
-<figure class="half-width-right" id="chapter08_figure11"><img alt="Figure 8.11" src="chapter08/ch08_11.png" />
+<figure class="half-width-right" id="chapter08_figure11"><img alt="Figure 8.11" src="ch08_11.png" />
 <figcaption>Figure 8.11</figcaption>
 </figure>
 
@@ -289,7 +289,7 @@ void cantor(float x, float y, float len) {
   line(x + len * 2/3, y, x + len, y);
 }</pre>
 
-<figure id="chapter08_figure12"><img alt="Figure 8.12" src="chapter08/ch08_12.png" />
+<figure id="chapter08_figure12"><img alt="Figure 8.12" src="ch08_12.png" />
 <figcaption>Figure 8.12</figcaption>
 </figure>
 
@@ -324,7 +324,7 @@ void cantor(float x, float y, float len) {
 
 <p>And since the <code>cantor()</code> function is called recursively, the same rule will be applied to the next lines and to the next and to the next as <code>cantor()</code> calls itself again and again! Now, don’t go and run this code yet. We’re missing that crucial element: an exit condition. We’ll want to make sure we stop at some point—for example, if the length of the line ever is less than 1 pixel.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/rkj_zTXde"><img alt="ch08 ex04" src="chapter08/ch08_ex04.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/rkj_zTXde"><img alt="ch08 ex04" src="ch08_ex04.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -346,7 +346,7 @@ void cantor(float x, float y, float len) {
 
 <p>Using <code>drawCircle()</code> and the Cantor set as models, generate your own pattern with recursion. Here is a screenshot of one that uses lines.</p>
 
-<figure class="screenshot"><img alt="ch08 exc01" src="chapter08/ch08_exc01.png" />
+<figure class="screenshot"><img alt="ch08 exc01" src="ch08_exc01.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 </div>
@@ -361,13 +361,13 @@ void cantor(float x, float y, float len) {
 
 <p>To demonstrate this technique, let’s look at another famous fractal pattern, discovered in 1904 by Swedish mathematician Helge von Koch. Here are the rules. (Note that it starts the same way as the Cantor set, with a single line.)</p>
 
-<figure id="chapter08_figure13"><img alt="Figure 8.13" src="chapter08/ch08_13.png" />
+<figure id="chapter08_figure13"><img alt="Figure 8.13" src="ch08_13.png" />
 <figcaption>Figure 8.13</figcaption>
 </figure>
 
 <p>The result looks like:</p>
 
-<figure id="chapter08_figure14"><img alt="Figure 8.14" src="chapter08/ch08_14.png" />
+<figure id="chapter08_figure14"><img alt="Figure 8.14" src="ch08_14.png" />
 <figcaption>Figure 8.14</figcaption>
 </figure>
 
@@ -455,7 +455,7 @@ void draw() {
 
 <p>Remember the Game of Life cellular automata? In that simulation, we always kept track of two generations: current and next. When we were finished computing the next generation, next became current and we moved on to computing the new next generation.  We are going to apply a similar technique here. We have an <code>ArrayList</code> that keeps track of the current set of <code>KochLine</code> objects (at the start of the program, there is only one). We will need a second <code>ArrayList</code> (let’s call it “next”) where we will place all the new <code>KochLine</code> objects that are generated from applying the Koch rules. For every <code>KochLine</code> object in the current <code>ArrayList</code>, four new <code>KochLine</code> objects are added to the next <code>ArrayList</code>. When we’re done, the next <code>ArrayList</code> becomes the current one.</p>
 
-<figure id="chapter08_figure15"><img alt="Figure 8.15" src="chapter08/ch08_15.png" />
+<figure id="chapter08_figure15"><img alt="Figure 8.15" src="ch08_15.png" />
 <figcaption>Figure 8.15</figcaption>
 </figure>
 
@@ -483,7 +483,7 @@ void generate() {
 
 <p>By calling <code>generate()</code> over and over again (for example, each time the mouse is pressed), we recursively apply the Koch curve rules to the existing set of <code>KochLine</code> objects. Of course, the above omits the real “work” here, which is figuring out those rules. How do we break one line segment into four as described by the rules? While this can be accomplished with some simple arithmetic and trigonometry, since our <code>KochLine</code> object uses <code>PVector</code>, this is a nice opportunity for us to practice our vector math. Let’s establish how many points we need to compute for each <code>KochLine</code> object.</p>
 
-<figure id="chapter08_figure16"><img alt="Figure 8.16" src="chapter08/ch08_16.png" />
+<figure id="chapter08_figure16"><img alt="Figure 8.16" src="ch08_16.png" />
 <figcaption>Figure 8.16</figcaption>
 </figure>
 
@@ -538,7 +538,7 @@ void generate() {
 
 <p>Now let’s move on to points B and D. B is one-third of the way along the line segment and D is two-thirds. Here we can make a <code>PVector</code> that points from start to end and shrink it to one-third the length for B and two-thirds the length for D to find these points.</p>
 
-<figure id="chapter08_figure17"><img alt="Figure 8.17" src="chapter08/ch08_17.png" />
+<figure id="chapter08_figure17"><img alt="Figure 8.17" src="ch08_17.png" />
 <figcaption>Figure 8.17</figcaption>
 </figure>
 
@@ -565,7 +565,7 @@ void generate() {
 
 <p>The last point, C, is the most difficult one to find. However, if you recall that the angles of an equilateral triangle are all sixty degrees, this makes it a little bit easier. If we know how to find point B with a <code>PVector</code> one-third the length of the line, what if we were to rotate that same <code>PVector</code> sixty degrees and move along that vector from point B? We’d be at point C!</p>
 
-<figure id="chapter08_figure18"><img alt="Figure 8.18" src="chapter08/ch08_18.png" />
+<figure id="chapter08_figure18"><img alt="Figure 8.18" src="ch08_18.png" />
 <figcaption>Figure 8.18</figcaption>
 </figure>
 
@@ -589,7 +589,7 @@ void generate() {
 
 <p>Putting it all together, if we call <code>generate()</code> five times in <code>setup()</code>, we’ll see the following result.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/rJUB76mdl"><img alt="ch08 ex05" src="chapter08/ch08_ex05.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/rJUB76mdl"><img alt="ch08 ex05" src="ch08_ex05.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -615,7 +615,7 @@ void setup() {
 <div data-type="exercise">
 <h5>Exercise 8.2</h5>
 
-<figure class="half-width-right"><img alt="ch08 exc02" src="chapter08/ch08_exc02.png" />
+<figure class="half-width-right"><img alt="ch08 exc02" src="ch08_exc02.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -643,7 +643,7 @@ void setup() {
 
 <p>Draw the Sierpiński triangle (as seen in Wolfram elementary CA) using recursion.</p>
 
-<figure><img alt="ch08 exc05" src="chapter08/ch08_exc05.png" />
+<figure><img alt="ch08 exc05" src="ch08_exc05.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 </div>
@@ -656,13 +656,13 @@ void setup() {
 
 <p>The fractals we have examined in this chapter so far are deterministic, meaning they have no randomness and will always produce the identical outcome each time they are run. They are excellent demonstrations of classic fractals and the programming techniques behind drawing them, but are too precise to feel <em>natural</em>. In this next part of the chapter, I want to examine some techniques behind generating a stochastic (or non-deterministic) fractal. The example we’ll use is a branching tree. Let’s first walk through the steps to create a deterministic version. Here are our production rules:</p>
 
-<figure id="chapter08_figure19"><img alt="Figure 8.19" src="chapter08/ch08_19.png" />
+<figure id="chapter08_figure19"><img alt="Figure 8.19" src="ch08_19.png" />
 <figcaption>Figure 8.19</figcaption>
 </figure>
 
 <p>Again, we have a nice fractal with a recursive definition: A branch is a line with two branches connected to it.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/SJY746XOg"><img alt="ch08 ex06" src="chapter08/ch08_ex06.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/SJY746XOg"><img alt="ch08 ex06" src="ch08_ex06.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -675,7 +675,7 @@ void setup() {
 <pre data-code-language="java" data-type="programlisting" class="codesplit">
 translate(width/2,height);</pre>
 
-<figure class="half-width-right-border" id="chapter08_figure20"><img alt="Figure 8.20" src="chapter08/ch08_20.png" />
+<figure class="half-width-right-border" id="chapter08_figure20"><img alt="Figure 8.20" src="ch08_20.png" />
 <figcaption>Figure 8.20</figcaption>
 </figure>
 
@@ -686,7 +686,7 @@ line(0, 0, 0, -100);</pre>
 
 <p>Once we’ve finished the root, we just need to translate to the end and rotate in order to draw the next branch. (Eventually, we’re going to need to package up what we’re doing right now into a recursive function, but let’s sort out the steps first.)</p>
 
-<figure id="chapter08_figure21"><img alt="Figure 8.21" src="chapter08/ch08_21.png" />
+<figure id="chapter08_figure21"><img alt="Figure 8.21" src="ch08_21.png" />
 <figcaption>Figure 8.21</figcaption>
 </figure>
 
@@ -699,11 +699,11 @@ line(0, 0, 0, -100);</pre>
 
 <p>Now that we have a branch going to the right, we need one going to the left. We can use <code>pushMatrix()</code> to save the transformation state before we rotate, letting us call <code>popMatrix()</code> to restore that state and draw the branch to the left. Let’s look at all the code together.</p>
 
-<figure class="two-col" id="chapter08_figure22"><img alt="Figure 8.22" src="chapter08/ch08_22.png" />
+<figure class="two-col" id="chapter08_figure22"><img alt="Figure 8.22" src="ch08_22.png" />
 <figcaption>Figure 8.22</figcaption>
 </figure>
 
-<figure class="two-col" id="chapter08_figure23"><img alt="Figure 8.23" src="chapter08/ch08_23.png" />
+<figure class="two-col" id="chapter08_figure23"><img alt="Figure 8.23" src="ch08_23.png" />
 <figcaption>Figure 8.23</figcaption>
 </figure>
 
@@ -752,7 +752,7 @@ void branch() {
 <div data-type="exercise">
 <h5>Exercise 8.6</h5>
 
-<figure><img alt="ch08 exc06" src="chapter08/ch08_exc06.png" />
+<figure><img alt="ch08 exc06" src="ch08_exc06.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -790,15 +790,15 @@ void branch(float len) {
 
 <p>We’ve also included a variable for theta that allows us, when writing the rest of the code in <code>setup()</code> and <code>draw()</code>, to vary the branching angle according to, say, the <code>mouseX</code> position.</p>
 
-<figure class="three-col"><img alt="ch08 ex06a" src="chapter08/ch08_ex06a.png" />
+<figure class="three-col"><img alt="ch08 ex06a" src="ch08_ex06a.png" />
 <figcaption>ch08 ex06a&nbsp;</figcaption>
 </figure>
 
-<figure class="three-col"><img alt="ch08 ex06b" src="chapter08/ch08_ex06b.png" />
+<figure class="three-col"><img alt="ch08 ex06b" src="ch08_ex06b.png" />
 <figcaption>ch08 ex06b&nbsp;</figcaption>
 </figure>
 
-<figure class="three-col"><img alt="ch08 ex06c" src="chapter08/ch08_ex06c.png" />
+<figure class="three-col"><img alt="ch08 ex06c" src="ch08_ex06c.png" />
 <figcaption>ch08 ex06c&nbsp;</figcaption>
 </figure>
 
@@ -829,7 +829,7 @@ void draw() {
 
 <p>Vary the <code>strokeWeight()</code> for each branch. Make the root thick and each subsequent branch thinner.</p>
 
-<figure class="screenshot"><img alt="ch08 exc07" src="chapter08/ch08_exc07.png" />
+<figure class="screenshot"><img alt="ch08 exc07" src="ch08_exc07.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 </div>
@@ -848,7 +848,7 @@ void draw() {
 
 <p>The recursive tree fractal is a nice example of a scenario in which adding a little bit of randomness can make the tree look more natural. Take a look outside and you’ll notice that branch lengths and angles vary from branch to branch, not to mention the fact that branches don’t all have exactly the same number of smaller branches. First, let’s see what happens when we simply vary the angle and length. This is a pretty easy one, given that we can just ask Processing for a random number each time we draw the tree.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/SygtpTUPX"><img alt="ch08 ex07a" src="chapter08/ch08_ex07a.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/SygtpTUPX"><img alt="ch08 ex07a" src="ch08_ex07a.png" />
 <figcaption>ch08 ex07a&nbsp;</figcaption>
 </figure>
 
@@ -875,7 +875,7 @@ void branch(float len) {
 
 <p>In the above function, we always call <code>branch()</code> twice. But why not pick a random number of branches and call <code>branch()</code> that number of times?</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/H1QwVaX_x"><img alt="ch08 ex07b" src="chapter08/ch08_ex07b.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/H1QwVaX_x"><img alt="ch08 ex07b" src="ch08_ex07b.png" />
 <figcaption>ch08 ex07b&nbsp;</figcaption>
 </figure>
 
@@ -953,7 +953,7 @@ void branch(float len) {
 
 <p>Let’s begin with a very simple L-system. (This is, in fact, Lindenmayer’s original L-system for modeling the growth of algae.)</p>
 
-<figure class="half-width-right" id="chapter08_figure24"><img alt="Figure 8.24: And so on and so forth..." src="chapter08/ch08_24.png" />
+<figure class="half-width-right" id="chapter08_figure24"><img alt="Figure 8.24: And so on and so forth..." src="ch08_24.png" />
 <figcaption>Figure 8.24: And so on and so forth...&nbsp;</figcaption>
 </figure>
 
@@ -994,7 +994,7 @@ current = next;</pre>
 
 <p>To be sure this is working, let’s package it into a function and and call it every time the mouse is pressed.</p>
 
-<figure class="screenshot"><img alt="ch08 ex08" src="chapter08/ch08_ex08.png" />
+<figure class="screenshot"><img alt="ch08 ex08" src="ch08_ex08.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -1079,7 +1079,7 @@ s += "add some more stuff";</pre>
 
 <p>Look familiar? This is the Cantor set generated with an L-system.</p>
 
-<figure id="chapter08_figure25"><img alt="Figure 8.25" src="chapter08/ch08_25.png" />
+<figure id="chapter08_figure25"><img alt="Figure 8.25" src="ch08_25.png" />
 <figcaption>Figure 8.25</figcaption>
 </figure>
 
@@ -1157,7 +1157,7 @@ for (int i = 0; i &lt; sentence.length(); i++) {
 
 <p>We won’t write out these classes here since they simply duplicate the code we’ve already worked out in this chapter. However, let’s see how they are put together in the main tab.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/By4ED6mOg"><img alt="ch08 ex09" src="chapter08/ch08_ex09.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/By4ED6mOg"><img alt="ch08 ex09" src="ch08_ex09.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 

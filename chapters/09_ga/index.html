@@ -58,7 +58,7 @@
 
 <p>To help illustrate the traditional genetic algorithm, we are going to start with monkeys. No, not our evolutionary ancestors. We’re going to start with some fictional monkeys that bang away on keyboards with the goal of typing out the complete works of Shakespeare.</p>
 
-<figure id="chapter09_figure1"><img alt="Figure 9.1" src="chapter09/ch09_01.png" />
+<figure id="chapter09_figure1"><img alt="Figure 9.1" src="ch09_01.png" />
 <figcaption>Figure 9.1</figcaption>
 </figure>
 
@@ -409,7 +409,7 @@ won</strong></p>
 
 <p>Now it’s time for the wheel of fortune.</p>
 
-<figure id="chapter09_figure2"><img alt="Figure 9.2" src="chapter09/ch09_02.png" />
+<figure id="chapter09_figure2"><img alt="Figure 9.2" src="ch09_02.png" />
 <figcaption>Figure 9.2</figcaption>
 </figure>
 
@@ -440,19 +440,19 @@ Parent B: PLAY</strong></p>
 
 <p>It’s now up to us to make a child phrase from these two. Perhaps the most obvious way (let’s call this the 50/50 method) would be to take the first two characters from A and the second two from B, leaving us with:</p>
 
-<figure id="chapter09_figure3"><img alt="Figure 9.3" src="chapter09/ch09_03.png" />
+<figure id="chapter09_figure3"><img alt="Figure 9.3" src="ch09_03.png" />
 <figcaption>Figure 9.3</figcaption>
 </figure>
 
 <p>A variation of this technique is to pick a random midpoint. In other words, we don’t have to pick exactly half of the code from each parent. We could sometimes end up with FLAY, and sometimes with FORY. This is preferable to the 50/50 approach, since we increase the variety of possibilities for the next generation.</p>
 
-<figure id="chapter09_figure4"><img alt="Figure 9.4: Picking a random midpoint" src="chapter09/ch09_04.png" />
+<figure id="chapter09_figure4"><img alt="Figure 9.4: Picking a random midpoint" src="ch09_04.png" />
 <figcaption>Figure 9.4: Picking a random midpoint&nbsp;</figcaption>
 </figure>
 
 <p>Another possibility is to randomly select a parent for each character in the child string. You can think of this as flipping a coin four times: heads take from parent A, tails from parent B. Here we could end up with many different results such as: PLRY, FLRK, FLRY, FORY, etc.</p>
 
-<figure id="chapter09_figure5"><img alt="Figure 9.5: Coin-flipping approach" src="chapter09/ch09_05.png" />
+<figure id="chapter09_figure5"><img alt="Figure 9.5: Coin-flipping approach" src="ch09_05.png" />
 <figcaption>Figure 9.5: Coin-flipping approach&nbsp;</figcaption>
 </figure>
 
@@ -464,7 +464,7 @@ Parent B: PLAY</strong></p>
 
 <p>Once the child DNA has been created via crossover, we apply one final process before adding the child to the next generation—<strong><em>mutation</em></strong>. Mutation is an optional step, as there are some cases in which it is unnecessary. However, it exists because of the Darwinian principle of variation. We created an initial population randomly, making sure that we start with a variety of elements. However, there can only be so much variety when seeding the first generation, and mutation allows us to introduce additional variety throughout the evolutionary process itself.</p>
 
-<figure class="half-width-right" id="chapter09_figure6"><img alt="Figure 9.6" src="chapter09/ch09_06.png" />
+<figure class="half-width-right" id="chapter09_figure6"><img alt="Figure 9.6" src="ch09_06.png" />
 <figcaption>Figure 9.6</figcaption>
 </figure>
 
@@ -618,13 +618,13 @@ void draw() {
 
 <p>In the <a href="#intro_section3">Introduction</a>, we covered the basics of probability and generating a custom distribution of random numbers. We’re going to use those techniques to assign a probability to each member of the population, picking parents by spinning the “wheel of fortune.” Let’s look at Figure 9.2 again.</p>
 
-<figure id="chapter09_figure2"><img alt="Figure 9.2 (again)" src="chapter09/ch09_02.png" />
+<figure id="chapter09_figure2"><img alt="Figure 9.2 (again)" src="ch09_02.png" />
 <figcaption>Figure 9.2 (again)&nbsp;</figcaption>
 </figure>
 
 <p>It might be fun to do something ridiculous and actually program a simulation of a spinning wheel as depicted above. But this is quite unnecessary.</p>
 
-<figure class="half-width-right" id="chapter09_figure7"><img alt="Figure 9.7" src="chapter09/ch09_07.png" />
+<figure class="half-width-right" id="chapter09_figure7"><img alt="Figure 9.7" src="ch09_07.png" />
 <figcaption>Figure 9.7</figcaption>
 </figure>
 
@@ -776,7 +776,7 @@ if (random(1) < mutationRate) {
 
 <p>You may have noticed that we’ve essentially walked through the steps of the genetic algorithm twice, once describing it in narrative form and another time with code snippets implementing each of the steps. What I’d like to do in this section is condense the previous two sections into one page, with the algorithm described in just three steps and the corresponding code alongside.</p>
 
-<figure class="screenshot"><img alt="ch09 ex01" src="chapter09/ch09_ex01.png" />
+<figure class="screenshot"><img alt="ch09 ex01" src="ch09_ex01.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -908,7 +908,7 @@ class DNA {
 
 <p>Add features to the above example to report more information about the progress of the genetic algorithm itself. For example, show the phrase closest to the target each generation, as well as report on the number of generations, average fitness, etc. Stop the genetic algorithm once it has solved the phrase. Consider writing a <code>Population</code> class to manage the GA, instead of including all the code in draw().</p>
 
-<figure class="screenshot"><img alt="ch09 exc01" src="chapter09/ch09_exc01.png" />
+<figure class="screenshot"><img alt="ch09 exc01" src="ch09_exc01.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 </div>
@@ -1121,13 +1121,13 @@ int totalPopulation = 150;</pre>
 
 <p>To put it another way, let’s graph the fitness function.</p>
 
-<figure id="chapter09_figure8"><img alt="Figure 9.8" src="chapter09/ch09_08.png" />
+<figure id="chapter09_figure8"><img alt="Figure 9.8" src="ch09_08.png" />
 <figcaption>Figure 9.8</figcaption>
 </figure>
 
 <p>This is a linear graph; as the number of characters goes up, so does the fitness score. However, what if the fitness increased exponentially as the number of correct characters increased? Our graph could then look something like:</p>
 
-<figure id="chapter09_figure9"><img alt="Figure 9.9" src="chapter09/ch09_09.png" />
+<figure id="chapter09_figure9"><img alt="Figure 9.9" src="ch09_09.png" />
 <figcaption>Figure 9.9</figcaption>
 </figure>
 
@@ -1358,11 +1358,11 @@ class Rocket {
 
 <p>A population of rockets launches from the bottom of the screen with the goal of hitting a target at the top of the screen (with obstacles blocking a straight line path).</p>
 
-<figure class="screenshot" id="chapter09_figure10"><img alt="Figure 9.10" src="chapter09/ch09_10.png" />
+<figure class="screenshot" id="chapter09_figure10"><img alt="Figure 9.10" src="ch09_10.png" />
 <figcaption>Figure 9.10</figcaption>
 </figure>
 
-<figure class="half-width-right" id="chapter09_figure11"><img alt="Figure 9.11" src="chapter09/ch09_11.png" />
+<figure class="half-width-right" id="chapter09_figure11"><img alt="Figure 9.11" src="ch09_11.png" />
 <figcaption>Figure 9.11</figcaption>
 </figure>
 
@@ -1563,13 +1563,13 @@ class DNA {
 <pre data-code-language="java" data-type="programlisting" class="codesplit">
 PVector v = new PVector(random(-1, 1), random(-1, 1));</pre>
 
-<figure class="half-width-right" id="chapter09_figure12"><img alt="Figure 9.12" src="chapter09/ch09_12.png" />
+<figure class="half-width-right" id="chapter09_figure12"><img alt="Figure 9.12" src="ch09_12.png" />
 <figcaption>Figure 9.12</figcaption>
 </figure>
 
 <p>This is perfectly fine and will likely do the trick. However, if we were to draw every single possible vector we might pick, the result would fill a square (see Figure 9.12). In this case, it probably doesn’t matter, but there is a slight bias to diagonals here given that a <code>PVector</code> from the center of a square to a corner is longer than a purely vertical or horizontal one.</p>
 
-<figure class="half-width-right" id="chapter09_figure13"><img alt="Figure 9.13" src="chapter09/ch09_13.png" />
+<figure class="half-width-right" id="chapter09_figure13"><img alt="Figure 9.13" src="ch09_13.png" />
 <figcaption>Figure 9.13</figcaption>
 </figure>
 
@@ -1702,7 +1702,7 @@ class Population {
 	</li>
 </ol>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/S1PaKpQOe"><img alt="ch09 ex02" src="chapter09/ch09_ex02.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/S1PaKpQOe"><img alt="ch09 ex02" src="ch09_ex02.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -1752,7 +1752,7 @@ void draw() {
 
 <p>The above example works, but it isn’t particularly interesting. After all, the rockets simply evolve to having DNA with a bunch of vectors that point straight upwards. In the next example, we’re going to talk through two suggested improvements for the example and provide code snippets that implement these improvements.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/H1Z_9pX_x"><img alt="ch09 ex03" src="chapter09/ch09_ex03.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/H1Z_9pX_x"><img alt="ch09 ex03" src="ch09_ex03.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -1902,7 +1902,7 @@ class Obstacle {
 <div data-type="exercise" id="chapter09_exercise12">
 <h5>Exercise 9.12</h5>
 
-<figure class="half-width-right"><img alt="ch09 exc12" src="chapter09/ch09_exc12.png" />
+<figure class="half-width-right"><img alt="ch09 exc12" src="ch09_exc12.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -1923,7 +1923,7 @@ class Obstacle {
 
 <p>Think of all the rating systems you’ve ever used. Could you evolve the perfect movie by scoring all films according to your Netflix ratings? The perfect singer according to American Idol voting?</p>
 
-<figure class="half-width-right" id="chapter09_figure14"><img alt="Figure 9.14" src="chapter09/ch09_14.png" />
+<figure class="half-width-right" id="chapter09_figure14"><img alt="Figure 9.14" src="ch09_14.png" />
 <figcaption>Figure 9.14</figcaption>
 </figure>
 
@@ -1983,7 +1983,7 @@ class Face {
 
 <p>Let’s look at how the steps of the genetic algorithm are applied in the main tab, noting how fitness is assigned according to mouse interaction and the next generation is created on a button press. The rest of the code for checking mouse positions, button interactions, etc. can be found in the accompanying example code.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/SyCZs6m_e"><img alt="ch09 ex04" src="chapter09/ch09_ex04.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/SyCZs6m_e"><img alt="ch09 ex04" src="ch09_ex04.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
@@ -2177,7 +2177,7 @@ class Bloop {
 
 <p>The ability for a bloop to find food is tied to two variables—size and speed. Bigger bloops will find food more easily simply because their size will allow them to intersect with food positions more often. And faster bloops will find more food because they can cover more ground in a shorter period of time.</p>
 
-<figure class="half-width-right" id="chapter09_figure15"><img alt="Figure 9.15" src="chapter09/ch09_15.png" />
+<figure class="half-width-right" id="chapter09_figure15"><img alt="Figure 9.15" src="ch09_15.png" />
 <figcaption>Figure 9.15</figcaption>
 </figure>
 
@@ -2293,7 +2293,7 @@ class DNA {
 
 <p>Before you run the example, take a moment to guess what size and speed of bloops the system will evolve towards. We’ll discuss following the code.</p>
 
-<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/r1b2jaXOx"><img alt="ch09 ex05" src="chapter09/ch09_ex05.png" />
+<figure class="screenshot" data-p5-sketch="https://editor.p5js.org/embed/r1b2jaXOx"><img alt="ch09 ex05" src="ch09_ex05.png" />
 <figcaption>&nbsp;</figcaption>
 </figure>
 
