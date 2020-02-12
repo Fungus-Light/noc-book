@@ -1,36 +1,46 @@
 
-# The Nature of Code Book Project
+# The Nature of Code 《代码本质》中文版
 
-_**This repo is no longer active! To follow the project visit [noc-book-2](https://github.com/nature-of-code/noc-book-2)!**_
+_**源仓库已经不再更新! 原作者开始在写新版，请看这里 [noc-book-2](https://github.com/nature-of-code/noc-book-2)!**_
 
+_**（fungus-light）虽然这是一本已经不再更新的书籍，但是我还是准备尝试着去翻译一下，一方面磨练自己的技术，另一方面也是方便大家**_
 
-Hello.  If you found your way here you have found the raw source material for my Nature of Code book.  The book is for sale in PDF and print forms at [natureofcode.com](http://www.natureofcode.com). There, you'll also find a free version of the book available as HTML.  
+你好啊。如果你找到这里，你就找到了我的书《代码本质》的原始材料. 这本书在[natureofcode.com](http://www.natureofcode.com)有纸质和PDF档出售. 那里你同样可以找到免费的网页版.  
 
-You may notice that all of the book's content is here -- illustrations, raw text (html), and well as design elements (CSS).  The book is licensed under the [Creative Commons Attribution-NonCommercial 3.0 Unported License](http://creativecommons.org/licenses/by-nc/3.0/).  You are free to share and remix the book, as long as you provide attribution and do not attempt to re-sell.
+你可能已经注意到了，这本书所有的原材料都在这里 —— 插图, 原始文本(html), 以及样式表(CSS).  这本书通过[Creative Commons Attribution-NonCommercial 3.0 Unported License](http://creativecommons.org/licenses/by-nc/3.0/)开源. 你可以免费的分享和改编这本书, 只要你标明出处并且不重新出售（非商业用途）。
 
-All of the book's code examples are licensed under the [MIT License](http://opensource.org/licenses/MIT).
+所有书中代码遵循[MIT License](http://opensource.org/licenses/MIT)开源.
 
-By using GitHub to host all the raw material for the book, it's my hope that I will be able to more easily manage corrections and revisions.  Please use the GitHub issues for bug reports, typos, suggestions, etc.  You are also welcome to fork the repo, make corrections on your own and submit a pull request.
+（fungus-light）由我改编后的JavaScript代码也同样遵循**MIT**协议开源。
 
-This repository is in progress.  It's for a new edition of the book that I will be generating with [The Magic Book](https://github.com/magicbookproject/magicbook).  For the previous version of the book, you can check out the [Nature of Code archived repo](https://github.com/shiffman/The-Nature-of-Code-archive).
+通过再GitHub上托管这本书的原材料, 我希望能更方便修改和更正错误.  请使用GitHub issues来汇报bug, 打字错误, 建议, 不啦不啦.  你也可以fork一份，然后自己修订然后发起pull request.
 
-# Steps to Build The Nature of Code
+（fungus-light）事实上这本书并不是第一版，之前还有更老的版本:-)。  
 
-* Install [node.js](https://nodejs.org/en/).
-* At a terminal prompt ([more info here](https://github.com/magicbookproject/magicbook/)):
+当前版本的原文仓库 [The Magic Book](https://github.com/magicbookproject/magicbook)。
+
+最老的版本[Nature of Code archived repo](https://github.com/shiffman/The-Nature-of-Code-archive).
+
+# 编译步骤
+**注：为了和cnpm相适应，我稍微修改了里面的依赖。基本不影响。**
+
+**magicbook依赖于princexml这个程序，国内下载很慢，所以一定要先下载安装princexml并配置完环境变量（windows）再安装magicbook**
+
+* 安装 [node.js](https://nodejs.org/en/).
+* 在终端中输入（中国国内用户推荐使用cnpm） ([more info here](https://github.com/magicbookproject/magicbook/)):
 ```
 npm install magicbook -g
 ```
-* Clone (or download) this very repo.
-* In terminal, navigate to the directory where you cloned this repo.
-* Enter these commands:
+* 克隆或者(或者下载) 这个仓库.
+* 在终端里, 进入仓库的目录.
+* 输入指令:
 ```
 npm install
 magicbook build
 ```
-* Navigate to "build" directory and look for generated files.
+* 在**build**文件夹里面可以看到编译完的内容.
 
 ###### Build Notes
-On Mac OSX, you need to install princexml along with the node-prince `brew cask install prince`  or download via [here.](http://www.princexml.com/download/)
+在Mac OSX, 你需要同时安装princexml以及 node-prince `brew cask install prince` 或者在[这里](http://www.princexml.com/download/)下载。
 
-More information about Magic Book at [its README](https://github.com/magicbookproject/magicbook/blob/master/README.md).
+更多关于Magic Book，查看[它的README](https://github.com/magicbookproject/magicbook/blob/master/README.md).
