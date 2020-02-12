@@ -3,7 +3,7 @@
 
 _**源仓库已经不再更新! 原作者开始在写新版，请看这里 [noc-book-2](https://github.com/nature-of-code/noc-book-2)!**_
 
-_**（fungus-light）虽然这是一本已经不再更新的书籍，但是我还是准备尝试着去翻译一下，一方面磨练自己的技术，另一方面也是方便大家**_
+_**（fungus-light）虽然这是一本已经不再更新的书籍，但是我还是准备尝试着去翻译一下，一方面磨练自己的技术，另一方面也是方便大家。同时这本书使用processing，所以保留这样一本书对于Java使用者是一件好事。**_
 
 你好啊。如果你找到这里，你就找到了我的书《代码本质》的原始材料. 这本书在[natureofcode.com](http://www.natureofcode.com)有纸质和PDF档出售. 那里你同样可以找到免费的网页版.  
 
@@ -25,6 +25,10 @@ _**（fungus-light）虽然这是一本已经不再更新的书籍，但是我�
 **注：为了和cnpm相适应，我稍微修改了里面的依赖。基本不影响。**
 
 **magicbook依赖于princexml这个程序，国内下载很慢，所以一定要先下载安装princexml并配置完环境变量（windows）再安装magicbook**
+
+**这本书原版在win10下编译会有问题，所以我修正了很多地方，而且我不能保证修改后在其他平台还能正常编译。**
+
+**切记：中文版仅在win10下编译通过，请自行测试其他平台或者干脆就只看我编译好的。**
 
 * 安装 [node.js](https://nodejs.org/en/).
 * 在终端中输入（中国国内用户推荐使用cnpm） ([more info here](https://github.com/magicbookproject/magicbook/)):

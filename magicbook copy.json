@@ -11,6 +11,23 @@
    ],
    "builds":[
       {
+         "format":"pdf",
+         "prince" : {
+            "log":"errors.txt",
+            "timeout" : 300000
+         },
+         "layout":"layouts/pdf.html",
+         "stylesheets":{
+            "files": [ "stylesheets/pdf.scss" ]
+         },
+         "images" : {
+            "files" : "noc_pdf/imgs/**/*.*"
+         },
+         "fonts" : {
+            "destination" : "assets/fonts/"
+         }
+      },
+      {
          "format":"html",
           "layout":"layouts/html.html",
           "stylesheets":{
@@ -18,7 +35,7 @@
              "destination" : "stylesheets/"
           },
           "javascripts" : {
-            "files" : [ "noc_html/javascripts/**/*.*"],
+            "files" : [ "noc_html/javascripts/*.js", "noc_html/processingjs/*.js" ],
             "destination" : "javascripts/"
           },
           "images" : {
